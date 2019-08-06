@@ -28,8 +28,8 @@ def work(urls):
 def totaltranslate():
     #批量翻译文章
 
-    start=93#需要翻译的起始文章编号
-    end=94#需要翻译的末尾文章编号
+    start=1#需要翻译的起始文章编号
+    end=100#需要翻译的末尾文章编号
 
     for i in range(start,end):
         print(i)
