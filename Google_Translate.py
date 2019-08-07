@@ -63,7 +63,7 @@ def totaltranslate():
                                     file2.write(target+'\n')
                                 else:
                                     file2.write('\n')
-                            elif r.status_code == 403:
+                            elif r.status_code == 403 or r.status_code == 413:
                                 line.replace(" #|\\|\"|& ","")
                                 list = line.split(",")
                                 result=[]
@@ -96,7 +96,7 @@ def totaltranslate():
                                                         result.append(" ")
                                 file2.write(",".join(result)+"\n")
                             else:
-                                file2.write("\n")
+                                print("error!")
                             time.sleep(random.randint(1, 3)) #设置睡眠时长，防止被封
 
                     urls = []
